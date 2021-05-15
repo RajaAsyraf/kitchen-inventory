@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KitchenController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/dashboard', function () {
+        return redirect()->route('kitchen.index');
+    })->name('dashboard');
+    Route::get('/kitchen', [KitchenController::class, 'index'])->name('kitchen.index');
+});
 
 require __DIR__.'/auth.php';
