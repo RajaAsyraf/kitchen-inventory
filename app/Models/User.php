@@ -40,4 +40,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * The user that belong to the kitchen.
+     */
+    public function kitchens()
+    {
+        return $this->belongsToMany(Kitchen::class);
+    }
 }
