@@ -18,4 +18,12 @@ class Kitchen extends Model
     {
         return $this->belongsToMany(User::class);
     }
+
+    /**
+     * Get all of the items for the kitchen.
+     */
+    public function items()
+    {
+        return $this->hasMany(Item::class);
+    }
 }
