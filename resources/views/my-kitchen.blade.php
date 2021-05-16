@@ -1,8 +1,15 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('My Kitchen') }} @ {{ $kitchen->name }}
-        </h2>
+        <div class="flex justify-between ...">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('My Kitchen') }} @ {{ $kitchen->name }}
+            </h2>
+            <form action="{{ route('kitchen.items.new', [$kitchen->id]) }}">
+                <button type="submit" class="px-4 text-sm font-medium rounded-lg block border-b border-purple-300 bg-purple-200 hover:bg-purple-300 text-purple-900">
+                    New Item
+            </button>
+            </form>
+        </div>
     </x-slot>
 
     <div class="py-6">

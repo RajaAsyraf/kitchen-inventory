@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\KitchenController;
+use App\Http\Controllers\KitchenItemController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,7 @@ Route::group(['middleware' => 'auth'], function() {
         return redirect()->route('kitchen.index');
     })->name('dashboard');
     Route::get('/kitchen', [KitchenController::class, 'index'])->name('kitchen.index');
+    Route::get('/kitchen/{id}/items/new', [KitchenItemController::class, 'create'])->name('kitchen.items.new');
 });
 
 require __DIR__.'/auth.php';
