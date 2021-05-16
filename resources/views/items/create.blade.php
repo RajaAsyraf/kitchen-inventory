@@ -14,8 +14,8 @@
                             <div class="flex items-center space-x-5">
                                 <div class="h-14 w-14 bg-purple-200 rounded-full flex flex-shrink-0 justify-center items-center text-purple-500 text-2xl font-mono">i</div>
                                     <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
-                                        <h2 class="leading-relaxed">New item</h2>
-                                        <p class="text-sm text-gray-500 font-normal leading-relaxed">Adding a new item into you kitchen inventory.</p>
+                                        <h2 class="leading-relaxed">New Item</h2>
+                                        <p class="text-sm text-gray-500 font-normal leading-relaxed">Adding a new item into your kitchen inventory.</p>
                                     </div>
                                 </div>
                                 <div class="divide-y divide-gray-200">
@@ -58,7 +58,7 @@
                                                 <a href="{{ route('kitchen.index') }}" class="flex justify-center items-center w-full text-gray-900 px-4 py-3 rounded-md focus:outline-none">
                                                     <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Cancel
                                                 </a>
-                                                <button type="submit" class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none">Create</button>
+                                                <button type="submit" class="bg-purple-500 hover:bg-purple-700 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none">Save</button>
                                             </div>
                                         </div>
                                     </form>

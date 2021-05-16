@@ -9,6 +9,6 @@ class KitchenController extends Controller
     public function index()
     {
         $kitchen = auth()->user()->kitchens()->with('items')->first();
-        return view('my-kitchen', compact('kitchen'));
+        return view('kitchen.index', compact('kitchen'));
     }
 }

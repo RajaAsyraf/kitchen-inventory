@@ -1,19 +1,17 @@
 <x-app-layout>
     <x-slot name="header">
-        <div class="flex justify-between ...">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('My Kitchen') }} @ {{ $kitchen->name }}
-            </h2>
-            <form action="{{ route('kitchen.items.new', [$kitchen->id]) }}">
-                <button type="submit" class="px-4 text-sm font-medium rounded-lg block border-b border-purple-300 bg-purple-200 hover:bg-purple-300 text-purple-900">
-                    New Item
-                </button>
-            </form>
-        </div>
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('My Kitchen') }} @ {{ $kitchen->name }}
+        </h2>
     </x-slot>
 
     <div class="py-6">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="pb-3 flex justify-end space-x-4">
+                <form action="{{ route('kitchen.items.new', [$kitchen->id]) }}">
+                    <button type="submit" class="bg-purple-500 hover:bg-purple-700 flex justify-center items-center text-white text-sm font-medium px-4 py-3 rounded-md focus:outline-none">New Item</button>
+                </form>
+            </div>
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="overflow-x-auto">
                     <div class="min-w-screen flex items-center justify-center font-sans overflow-hidden">
