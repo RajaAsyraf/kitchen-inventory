@@ -7,7 +7,7 @@
             <form action="{{ route('kitchen.items.new', [$kitchen->id]) }}">
                 <button type="submit" class="px-4 text-sm font-medium rounded-lg block border-b border-purple-300 bg-purple-200 hover:bg-purple-300 text-purple-900">
                     New Item
-            </button>
+                </button>
             </form>
         </div>
     </x-slot>

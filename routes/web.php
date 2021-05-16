@@ -24,6 +24,7 @@ Route::group(['middleware' => 'auth'], function() {
         return redirect()->route('kitchen.index');
     })->name('dashboard');
     Route::get('/kitchen', [KitchenController::class, 'index'])->name('kitchen.index');
+    Route::post('/kitchen/{id}/items', [KitchenItemController::class, 'store'])->name('kitchen.items.store');
     Route::get('/kitchen/{id}/items/new', [KitchenItemController::class, 'create'])->name('kitchen.items.new');
 });
 

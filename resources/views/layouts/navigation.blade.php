@@ -63,7 +63,7 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('kitchen.index')" :active="request()->routeIs('kitchen.index')">
+            <x-responsive-nav-link :href="route('kitchen.index')" :active="request()->routeIs('kitchen.*')">
                 {{ __('Kitchen') }}
             </x-responsive-nav-link>
         </div>
