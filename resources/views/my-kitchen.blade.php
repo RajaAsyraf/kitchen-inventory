@@ -39,7 +39,10 @@
                                                 </td> -->
                                                 <td class="py-3 px-6 text-center">
                                                     <!-- <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">Active</span> -->
-                                                    <span>{{ $item->expired_at }}</span>
+                                                    <span>
+                                                        {{ $item->expired_at->format('d-m-Y H:i A') }}<br>
+                                                        <small>{{ $item->expired_at->diffForHumans() }}</small>
+                                                    </span>
                                                 </td>
                                                 <td class="py-3 px-6 text-center">
                                                     <div class="flex item-center justify-center">

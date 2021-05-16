@@ -18,7 +18,7 @@ class CreateItemsTable extends Migration
             $table->string('name');
             $table->integer('quantity');
             $table->string('unit');
-            $table->date('expired_at');
+            $table->datetime('expired_at');
             $table->unsignedBigInteger('kitchen_id');
             $table->timestamps();
         });

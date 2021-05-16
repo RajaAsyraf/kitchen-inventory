@@ -12,6 +12,15 @@ class Item extends Model
     protected $fillable = ['name', 'quantity', 'unit', 'expired_at'];
 
     /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'expired_at' => 'datetime',
+    ];
+
+    /**
      * Get the kitchen that the item belongs to.
      */
     public function kitchen()
