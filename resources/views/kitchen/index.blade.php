@@ -8,7 +8,7 @@
     <div class="py-6">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="pb-3 flex justify-end space-x-4">
-                <form action="{{ route('kitchen.items.new', [$kitchen->id]) }}">
+                <form action="{{ route('kitchen.items.create', [$kitchen->id]) }}">
                     <button type="submit" class="bg-purple-500 hover:bg-purple-700 flex justify-center items-center text-white text-sm font-medium px-4 py-3 rounded-md focus:outline-none">New Item</button>
                 </form>
             </div>

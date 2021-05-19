@@ -518,6 +518,7 @@ class ComposerStaticInit4fac58a84525ab54557eeb0e850aecef
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\ItemController' => __DIR__ . '/../..' . '/app/Http/Controllers/ItemController.php',
         'App\\Http\\Controllers\\KitchenController' => __DIR__ . '/../..' . '/app/Http/Controllers/KitchenController.php',
+        'App\\Http\\Controllers\\KitchenItemController' => __DIR__ . '/../..' . '/app/Http/Controllers/KitchenItemController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',

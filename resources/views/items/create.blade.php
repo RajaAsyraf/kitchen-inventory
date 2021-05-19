@@ -40,6 +40,7 @@
                                                             <option value="piece">Piece</option>
                                                             <option value="packet">Packet</option>
                                                             <option value="bottle">Bottle</option>
+                                                            <option value="can">Can</option>
                                                             <option value="percentage">Percentage (%)</option>
                                                         </select>
                                                     </div>
