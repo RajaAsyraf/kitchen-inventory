@@ -38,7 +38,7 @@
                                                     <div class="relative focus-within:text-gray-600 text-gray-400">
                                                         <select name="unit" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" required>
                                                             <option value="piece">Piece</option>
-                                                            <option value="packet">Packet</option>
+                                                            <option value="pack">Pack</option>
                                                             <option value="bottle">Bottle</option>
                                                             <option value="can">Can</option>
                                                             <option value="percentage">Percentage (%)</option>
