@@ -13,14 +13,25 @@ class ItemController extends Controller
 
         abort_unless($item->isVisibleTo(auth()->user()), 404);
 
-        dd($item);
-
         return view('items.show', compact('item'));
     }
 
-    public function update()
+    public function update($id)
     {
+        $input = request()->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'quantity' => ['required', 'integer'],
+            'unit' => ['required', 'string', 'max:255'],
+            'expired_at' => ['required'],
+        ]);
 
+        $item = Item::findOrFail($id);
+
+        abort_unless($item->isVisibleTo(auth()->user()), 404);
+
+        $item->update($input);
+
+        return redirect()->route('items.show', $item->id);
     }
 
     public function destroy($id)

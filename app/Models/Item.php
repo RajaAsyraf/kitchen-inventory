@@ -28,4 +28,9 @@ class Item extends Model
     {
         return $this->belongsTo(Kitchen::class);
     }
+
+    public function isVisibleTo($user)
+    {
+        return $this->kitchen->isVisibleTo($user);
+    }
 }

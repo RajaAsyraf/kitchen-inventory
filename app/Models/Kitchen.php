@@ -26,4 +26,9 @@ class Kitchen extends Model
     {
         return $this->hasMany(Item::class);
     }
+
+    public function isVisibleTo($user)
+    {
+        return $this->is_active && $this->users->whereIn('id', $user->id);
+    }
 }
