@@ -6,6 +6,64 @@
     </x-slot>
 
     <div class="py-6">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="flex items-center bg-gray-50 dark:bg-gray-900">
+                    <div class="container max-w-6xl px-5 mx-auto my-5">
+                        <div class="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
+                            <div class="p-5 bg-white rounded shadow-sm">
+                                <div class="text-base text-gray-400 ">Expired In 3 Months</div>
+                                <div class="flex items-center pt-1">
+                                    <div class="text-2xl font-bold text-gray-900 ">{{ $kitchen->stats['expiredInThreeMonth'] }} item{{ $kitchen->stats['expiredInThreeMonth'] > 1 ? 's' : '' }}</div>
+                                    <!-- <span class="flex items-center px-2 py-0.5 mx-2 text-sm text-green-600 bg-green-100 rounded-full">
+                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span>1.8%</span>
+                                    </span> -->
+                                </div>
+                            </div>
+                            <div class="p-5 bg-white rounded shadow-sm">
+                                <div class="text-base text-gray-400 ">Expired In 6 Months</div>
+                                <div class="flex items-center pt-1">
+                                    <div class="text-2xl font-bold text-gray-900 ">{{ $kitchen->stats['expiredInSixMonth'] }} item{{ $kitchen->stats['expiredInSixMonth'] > 1 ? 's' : '' }}</div>
+                                    <!-- <span class="flex items-center px-2 py-0.5 mx-2 text-sm text-red-600 bg-red-100 rounded-full">
+                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span>2.5%</span>
+                                    </span> -->
+                                </div>
+                            </div>
+                            <div class="p-5 bg-white rounded shadow-sm">
+                                <div class="text-base text-gray-400 ">Expired In 1 year</div>
+                                <div class="flex items-center pt-1">
+                                    <div class="text-2xl font-bold text-gray-900 ">{{ $kitchen->stats['expiredInOneYear'] }} item{{ $kitchen->stats['expiredInOneYear'] > 1 ? 's' : '' }}</div>
+                                    <!-- <span class="flex items-center px-2 py-0.5 mx-2 text-sm text-green-600 bg-green-100 rounded-full">
+                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span>5.2%</span>
+                                    </span> -->
+                                </div>
+                            </div>
+                            <div class="p-5 bg-white rounded shadow-sm">
+                                <div class="text-base text-gray-400 ">Total Items</div>
+                                <div class="flex items-center pt-1">
+                                    <div class="text-2xl font-bold text-gray-900 ">{{ count($kitchen->items) }} item{{ count($kitchen->items) > 1 ? 's' : '' }}</div>
+                                    <!-- <span class="flex items-center px-2 py-0.5 mx-2 text-sm text-green-600 bg-green-100 rounded-full">
+                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span>2.2%</span>
+                                    </span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="pb-3 flex justify-end space-x-4">
                 <form action="{{ route('kitchen.items.create', [$kitchen->id]) }}">
