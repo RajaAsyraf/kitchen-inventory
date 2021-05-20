@@ -9,7 +9,10 @@ class KitchenController extends Controller
 {
     public function index()
     {
-        $kitchen = auth()->user()->kitchens()->with('items')->first();
+        $kitchen = auth()->user()->kitchens()->with(['items' => function($query) {
+            $query->orderBy('expired_at', 'asc');
+        }])->first();
+
         $threeMonthDate = Carbon::today()->add(3, 'month')->toDateString();
         $expiredInThreeMonth = $kitchen->items->where('expired_at', '<', $threeMonthDate)->count();
 
@@ -24,6 +27,7 @@ class KitchenController extends Controller
             'expiredInSixMonth' => $expiredInSixMonth,
             'expiredInOneYear' => $expiredInOneYear,
         ];
+        
         return view('kitchen.index', compact('kitchen'));
     }
 }
