@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="overflow-hidden sm:rounded-lg">
                 <div class="flex items-center bg-gray-100 dark:bg-gray-900">
-                    <div class="container max-w-6xl mx-auto">
+                    <div class="container mx-auto">
                         <div class="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
                             <div class="p-5 bg-white rounded shadow-sm">
                                 <div class="text-base text-gray-400 ">Expired In 3 Months</div>
