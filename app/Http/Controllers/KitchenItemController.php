@@ -19,6 +19,7 @@ class KitchenItemController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'quantity' => ['required', 'integer'],
             'unit' => ['required', 'string', 'max:255'],
+            'location' => ['string', 'max:255', 'nullable'],
             'expired_at' => ['required'],
         ]);
         $kitchen->items()->create($input);

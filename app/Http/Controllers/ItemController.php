@@ -22,6 +22,7 @@ class ItemController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'quantity' => ['required', 'integer'],
             'unit' => ['required', 'string', 'max:255'],
+            'location' => ['string', 'max:255', 'nullable'],
             'expired_at' => ['required'],
         ]);
 
@@ -31,7 +32,7 @@ class ItemController extends Controller
 
         $item->update($input);
 
-        return redirect()->route('items.show', $item->id);
+        return redirect()->route('kitchen.index');
     }
 
     public function destroy($id)

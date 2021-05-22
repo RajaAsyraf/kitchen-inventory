@@ -10,7 +10,7 @@ class Item extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['name', 'quantity', 'unit', 'expired_at'];
+    protected $fillable = ['name', 'quantity', 'unit', 'location', 'expired_at'];
 
     /**
      * The attributes that should be cast to native types.

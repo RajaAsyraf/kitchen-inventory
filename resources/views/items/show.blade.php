@@ -52,6 +52,13 @@
                                                 </div>
                                             </div>
                                             <div class="flex flex-col">
+                                                <label class="leading-loose">Location</label>
+                                                <input type="text" name="location" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Eg: Refrigerator (Bottom)" value="{{ old('location') ?? $item->location }}">
+                                                @error('location')
+                                                    <small class="text-red-500">{{ $message }}</small>
+                                                @enderror
+                                            </div>
+                                            <div class="flex flex-col">
                                                 <label class="leading-loose">Expired At</label>
                                                 <div class="relative focus-within:text-gray-600 text-gray-400">
                                                     <input type="date" name="expired_at" class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="25/02/2020" value="{{ old('expired_at') ?? $item->expired_at->format('Y-m-d') }}" required>

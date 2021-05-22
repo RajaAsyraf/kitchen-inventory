@@ -80,6 +80,7 @@
                                         <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                                             <th class="py-3 px-6 text-left">Name</th>
                                             <th class="py-3 px-6 text-left">Quantity</th>
+                                            <th class="py-3 px-6 text-center">Location</th>
                                             <th class="py-3 px-6 text-center">Expired At</th>
                                             <th class="py-3 px-6 text-center">Actions</th>
                                         </tr>
@@ -95,6 +96,11 @@
                                                 <td class="py-3 px-6 text-left">
                                                     <div class="flex items-center">
                                                         <span>{{ $item->quantity }}&nbsp;{{ $item->unit }}</span>
+                                                    </div>
+                                                </td>
+                                                <td class="py-3 px-6 text-center">
+                                                    <div class="flex items-center">
+                                                        <span>{{ $item->location }}</span>
                                                     </div>
                                                 </td>
                                                 <td class="py-3 px-6 text-center">
